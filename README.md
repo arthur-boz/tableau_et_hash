@@ -1,3 +1,4 @@
-Dossier fait par ARTHUR et CHARLES 
+Fait par ARTHUR et CHARLES
+Tableau journaliste + hashes crypto  
 
 # tableau_et_hash
