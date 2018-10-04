@@ -1,4 +1,4 @@
-def data 
+def data
 ddata = ["@jcunniet","@PaulLampon","@Aziliz31","@ssoumier","@marionsouzeau","@gaellombart","@bendarag","@AurelieLebelle",
 		"@julienduffe","@thomaspoupeau","@LilyRossignol","@ClairGuedon","@stephanieauguy","@claw_prolongeau","@_JulieMenard",
 		"@LColcomb","@Zlauwereys","@MeLonguet","@DorotheeLN","@NolwennCosson","@ADaboval","@Remibaldy","@bderveaux","@amandechap",
@@ -42,21 +42,21 @@ ddata = ["@jcunniet","@PaulLampon","@Aziliz31","@ssoumier","@marionsouzeau","@ga
 		"@NotPatrick","@ivalerio","@FabienneSchmitt","@alexgoude","@JeromeColombain","@manhack","@Capucine_Cousin","@Fsorel","@oliviertesquet",
 		"@marjoriepaillon","@ginades","@PierreTran","@DelphineCuny","@reesmarc","@lauratenoudji","@ldupin","@carolinedescham","@Lucile_Quillet",
 		"@cgabizon","@Allocab","@epenser","@JAGventeprivee","@frwrds","@Laure__Bourdon","@Xavier75","@maximeverner","@s_jourdain","@LoriHelloc"]
-		
+
 	end
 
-def total(data) 
-	puts"Combien y a t'il de chiens de garde dans ce tableau? Il y en  a #{data.length}"
+def total(data)
+	puts"Il y'a #{data.length} chiens de garde dans ce tableau."
 
 end
 
 def num (data)
-	number = [data.keep_if { |v| v =~ /[0,1,2,3,4,5,6,7,8,9]/ } ] 
+	number = [data.keep_if { |v| v =~ /[0,1,2,3,4,5,6,7,8,9]/ } ]
 
 
 data << number
 
-	puts "Combien y a t'il de chiens de garde dans ce tableau avec  des pseudow commençant avec un num ? Il y #{data.length}"
+	puts " Il y #{data.length} chiens de gardes dans ce tableau dont l'adresse comporte au moins un numéro"
 
 
 end
@@ -69,10 +69,9 @@ def aude(data)
 		lettre = lettre.downcase
 	    if lettre.partition("aude")[1]=="aude"
 	    	counter += 1
-    	end	
+    	end
 	end
-	puts "Combien d'adresses contiennent les 4 lettres du prénom Aude à la suite ? Il y a
-	 #{counter} contenant 'aude' dans l'adresse"
+	puts " Il y a #{counter} contenant 'aude' dans l'adresse"
 end
 
 
@@ -81,27 +80,27 @@ def alpha (data)
 end
 
 def underscore_mamène(data)
-	underscore = [ data.keep_if { |v| v =~ /[_]/ } ] 
+	underscore = [ data.keep_if { |v| v =~ /[_]/ } ]
 	data << underscore
 	puts data.length
 end
 
 def combien_maj(data)
-	maju = [ data.keep_if { |v| v =~ /[A-Z]/ } ] 
-	data << maju 
+	maju = [ data.keep_if { |v| v =~ /[A-Z]/ } ]
+	data << maju
 	puts "Il y a #{data.length} adresses de chiens de garde contenant une majuscule"
 
 
 end
 
 def begin_maj(data)
-	counter = 0 #si le compteur est à zéro 
+	counter = 0 #si le compteur est à zéro
 	data.each do |lettre| # chaque élément va subir une action dans le tab
-		if lettre[1]==lettre[1].upcase # si la première lettre est égale à une majuscule car 0 = @ 
+		if lettre[1]==lettre[1].upcase # si la première lettre est égale à une majuscule car 0 = @
 			 counter += 1 # met + 1 au compteur
 		end
 	end
-	puts "#{counter} démarrent avec une majuscule" 
+	puts "#{counter} démarrent avec une majuscule"
 	return counter
 end
 
@@ -115,6 +114,3 @@ combien_maj(data)
 underscore_mamène(data)
 
 alpha (data)
-
-
-
